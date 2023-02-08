@@ -43,18 +43,21 @@
                     <td class="auto-style13">Full Name:</td>
                     <td class="auto-style14">
                         <asp:TextBox ID="Tname" runat="server" Width="232px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Name must not be empty" ControlToValidate="Tname" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style11">Phone Number:</td>
                     <td class="auto-style12">
-                        <asp:TextBox ID="Tnum" runat="server" Width="196px"></asp:TextBox>
+                        <asp:TextBox ID="Tnum" runat="server" Width="196px" MaxLength="11"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"  ValidationExpression="^[0-9]{11,11}$" ControlToValidate="Tnum" ErrorMessage="Enter a valid phone number" ForeColor="#CC0000"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style9">Email Address:</td>
                     <td class="auto-style10">
                         <asp:TextBox ID="Temail" runat="server"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ValidationExpression="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" ControlToValidate="Temail" ErrorMessage="Enter a valid email address" ForeColor="#CC0000"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -66,6 +69,7 @@
                         </asp:Calendar>
                     </td>
                 </tr>
+              
              
 
             
