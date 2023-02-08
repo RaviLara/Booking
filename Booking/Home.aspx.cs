@@ -11,7 +11,12 @@ namespace Booking
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
-    }
+        
+        protected void Create_Click(object sender, EventArgs e)
+        {
+            
+        }
+    }       
 }
